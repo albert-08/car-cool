@@ -21,43 +21,73 @@
         - Presupuesto(15,000 - 150,000)
         - Caja de Velocidades: [Manual O Automatico]
             -->
-    <form>
+    <div class="form">
 
-        <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Modelo</span>
+            </div>
+            <input type="text" class="form-control" placeholder="2019 o 2020" aria-label="Modelo" aria-describedby="basic-addon1" id="inputModelo">
+        </div>
+
+        <!-- <div class="form-group">
             <label for="exampleFormControlSelect1">Modelo</label>
             <select class="form-control" id="exampleFormControlSelect1">
                 <option id="Chevrolet">Chevrolet</option>
                 <option id="Ford">Ford</option>
                 <option id="Nissan">Nissan</option>
             </select>
+        </div> -->
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Marca</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Chevrolet, Ford o Nissan" aria-label="Marca" aria-describedby="basic-addon1" id="inputMarca">
         </div>
-        
-        <div class="form-group">
+
+        <!-- <div class="form-group">
             <label for="exampleFormControlSelect1">Marca</label>
             <select multiple class="form-control" id="exampleFormControlSelect1">
                 <option id="y2019">2019</option>
                 <option id="y2020">2020</option>
             </select>
-        </div>
+        </div> -->
         
-        <div class="form-group">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Transmision</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Manual o Automatica" aria-label="Modelo" aria-describedby="basic-addon1" id="inputTransmision">
+        </div>
+
+        <!-- <div class="form-group">
             <label for="exampleFormControlSelect1">Transmision</label>
             <select multiple class="form-control" id="exampleFormControlSelect1">
                 <option id="T-Manual">Manual</option>
                 <option id="T-Automatica">Automatica</option>
             </select>
+        </div> -->
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Presupuesto</span>
+            </div>
+            <input type="number" min="1.00" max="150000.00" step="1000.00" class="form-control" placeholder="De $ 1 hasta $ 150,000" aria-label="Presupuesto" aria-describedby="basic-addon1" id="inputPresupuesto">
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="formControlRange">Presupuesto</label>
             <input type="range" class="form-control-range" id="formControlRange">
-        </div>
-
+        </div> -->
+        
         <button class="btn btn-primary align-self-center" type="submit" id="btnBuscar">Buscar</button>
 
-    </form>
+    </div>
 
     <!-- RESULTADOS DE LA BUSQUEDA -->
+
+        <!-- Aqui empezamos los rows para dibujar los cards -->
 
     <!-- QUIENES SOMOS (OPCIONAL) -->
 
