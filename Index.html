@@ -10,9 +10,30 @@
     <title>CarCOOL</title>
 </head>
 
-<body>
+<body style="margin: 1em;">
 
     <!-- HOME Bienvenida -->
+    <header>
+        <div class="fixed-top">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <h4 class="text-white h3">Bienvenidos a la Nave del NO Olvido</h4>
+                    <span class="text-muted">A traves de este medio conseguiras la nave donde seras siempre recuerdo y nunca inrecuerdo.</span>
+                    <h4 class="text-white h4 d-flex flex-row-reverse">Quienes Somos</h4>
+                    <span class="text-muted d-flex flex-row-reverse">Una startup de primer mundo, dedicado a entregar tu sueño convertido en ruedas, formado de los coaches de vida("developers") @emmaGonzalez y @albertoFlores.</span>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark" id="navbar">
+                <h1 class="text-white h2 bolder">Nave NO Olvido</h1>
+                <img src="./Assets/Car-Logo-f-wh.svg" height="40" alt="" id="carLogo">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
 
     <!-- FORMULARIO Cotizador -->
     <!-- PIDE
@@ -25,9 +46,10 @@
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Modelo</span>
+                <span class="input-group-text" id="basic-addon1">Modelo</span>
             </div>
-            <input type="text" class="form-control" placeholder="2019 o 2020" aria-label="Modelo" aria-describedby="basic-addon1" id="inputModelo">
+            <input type="number" min="2019" max="2020" step="1" class="form-control" placeholder="2019 o 2020"
+                aria-label="Modelo" aria-describedby="basic-addon1" id="inputModelo">
         </div>
 
         <!-- <div class="form-group">
@@ -41,9 +63,10 @@
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Marca</span>
+                <span class="input-group-text" id="basic-addon1">Marca</span>
             </div>
-            <input type="text" class="form-control" placeholder="Chevrolet, Ford o Nissan" aria-label="Marca" aria-describedby="basic-addon1" id="inputMarca">
+            <input type="text" class="form-control" placeholder="Chevrolet, Ford o Nissan" aria-label="Marca"
+                aria-describedby="basic-addon1" id="inputMarca">
         </div>
 
         <!-- <div class="form-group">
@@ -53,12 +76,13 @@
                 <option id="y2020">2020</option>
             </select>
         </div> -->
-        
+
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Transmision</span>
+                <span class="input-group-text" id="basic-addon1">Transmision</span>
             </div>
-            <input type="text" class="form-control" placeholder="Manual o Automatica" aria-label="Modelo" aria-describedby="basic-addon1" id="inputTransmision">
+            <input type="text" class="form-control" placeholder="Manual o Automatica" aria-label="Modelo"
+                aria-describedby="basic-addon1" id="inputTransmision">
         </div>
 
         <!-- <div class="form-group">
@@ -71,16 +95,18 @@
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Presupuesto</span>
+                <span class="input-group-text" id="basic-addon1">Presupuesto</span>
             </div>
-            <input type="number" min="1.00" max="150000.00" step="1000.00" class="form-control" placeholder="De $ 1 hasta $ 150,000" aria-label="Presupuesto" aria-describedby="basic-addon1" id="inputPresupuesto">
+            <input type="number" min="0.00" max="150000.00" step="1000.00" class="form-control"
+                placeholder="De $ 1 hasta $ 150,000" aria-label="Presupuesto" aria-describedby="basic-addon1"
+                id="inputPresupuesto">
         </div>
 
         <!-- <div class="form-group">
             <label for="formControlRange">Presupuesto</label>
             <input type="range" class="form-control-range" id="formControlRange">
         </div> -->
-        
+
         <button class="btn btn-primary align-self-center" type="submit" id="btnBuscar">Buscar</button>
 
     </div>
@@ -91,21 +117,28 @@
     <div class="container m-1">
         <div class="row">
             <div class="card" style="width: 15rem;" id="carCard">
-                <img src="https://i.pinimg.com/236x/85/c4/94/85c494c7305846ba3be667ea25f88650.jpg" class="card-img-top" alt="...">
+                <img src="https://i.pinimg.com/236x/85/c4/94/85c494c7305846ba3be667ea25f88650.jpg" class="card-img-top"
+                    alt="...">
                 <ul class="list-group list-group-flush">
-                    <span class="font-weight-bold">Marca:</span><li class="list-group-item">autos[i].make</li>
-                    <span class="font-weight-bold">Modelo:</span><li class="list-group-item">autos[i].model</li>
-                    <span class="font-weight-bold">Colores:</span><li class="list-group-item">autos[i].colors</li>
-                    <span class="font-weight-bold">Precio:</span><li class="list-group-item">autos[i].price</li>
+                    <span class="font-weight-bold">Marca:</span>
+                    <li class="list-group-item">autos[i].make</li>
+                    <span class="font-weight-bold">Modelo:</span>
+                    <li class="list-group-item">autos[i].model</li>
+                    <span class="font-weight-bold">Colores:</span>
+                    <li class="list-group-item">autos[i].colors</li>
+                    <span class="font-weight-bold">Precio:</span>
+                    <li class="list-group-item">autos[i].price</li>
                 </ul>
             </div>
         </div>
     </div>
 
-
-    <!-- QUIENES SOMOS (OPCIONAL) -->
-
     <!-- FOOTER -->
+    <footer>
+        <div class="fixed-bottom bg-dark p-1">
+            <h4 class="text-white h5 p-1">Espera a nuestro proximo exito en el Fuck Up Nights mas cercano a tu localidad.</h4>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
