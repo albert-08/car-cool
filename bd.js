@@ -7,8 +7,8 @@ var autos = [
     {"year":2019,"make":"Chevrolet","model":"Corvette","body_styles":["Coupe","Convertible"],"price":119628,"colors":["black","white","red","blue"],"transmision":"manual"},
     {"year":2019,"make":"Chevrolet","model":"Cruze","body_styles":["Sedan","Hatchback"],"price":78734,"colors":["white","black","red","blue"],"transmision":"auto"},
     {"year":2019,"make":"Chevrolet","model":"Equinox","body_styles":["SUV"],"price":112647,"colors":["black"],"transmision":"auto"},
-    {"year":2019,"make":"Chevrolet","model":"Express 2500 Cargo","body_styles":["Van/Minivan"],"price":127099,"colors":["black","white","blue"],"transmision":"manual"}
-    ,{"year":2019,"make":"Chevrolet","model":"Express 2500 Passenger","body_styles":["Van/Minivan"],"price":125743,"colors":["red","blue","black"],"transmision":"auto"},
+    {"year":2019,"make":"Chevrolet","model":"Express 2500 Cargo","body_styles":["Van/Minivan"],"price":127099,"colors":["black","white","blue"],"transmision":"manual"},
+    {"year":2019,"make":"Chevrolet","model":"Express 2500 Passenger","body_styles":["Van/Minivan"],"price":125743,"colors":["red","blue","black"],"transmision":"auto"},
     {"year":2019,"make":"Chevrolet","model":"Express 3500 Cargo","body_styles":["Van/Minivan"],"price":78287,"colors":["black"],"transmision":"manual"},
     {"year":2019,"make":"Chevrolet","model":"Express 3500 Passenger","body_styles":["Van/Minivan"],"price":77532,"colors":["red"],"transmision":"auto"},
     {"year":2019,"make":"Chevrolet","model":"Impala","body_styles":["Sedan"],"price":81505,"colors":["red"],"transmision":"manual"},
@@ -21,8 +21,8 @@ var autos = [
     {"year":2019,"make":"Chevrolet","model":"Silverado 2500 HD Double Cab","body_styles":["Pickup"],"price":77571,"colors":["black","white"],"transmision":"auto"},
     {"year":2019,"make":"Chevrolet","model":"Silverado 2500 HD Regular Cab","body_styles":["Pickup"],"price":93616,"colors":["red"],"transmision":"manual"},
     {"year":2019,"make":"Chevrolet","model":"Silverado 3500 HD Crew Cab","body_styles":["Pickup"],"price":81132,"colors":["red","blue","white"],"transmision":"auto"},
-    {"year":2019,"make":"Chevrolet","model":"Sonic","body_styles":["Sedan","Hatchback"],"price":97583,"colors":["red","black","white","blue"],"transmision":"manual"}
-    ,{"year":2019,"make":"Chevrolet","model":"Spark","body_styles":["Hatchback"],"price":80466,"colors":["black","white","red","blue"],"transmision":"auto"},
+    {"year":2019,"make":"Chevrolet","model":"Sonic","body_styles":["Sedan","Hatchback"],"price":97583,"colors":["red","black","white","blue"],"transmision":"manual"},
+    {"year":2019,"make":"Chevrolet","model":"Spark","body_styles":["Hatchback"],"price":80466,"colors":["black","white","red","blue"],"transmision":"auto"},
     {"year":2019,"make":"Chevrolet","model":"Suburban","body_styles":["SUV"],"price":75817,"colors":["white"],"transmision":"manual"},
     {"year":2019,"make":"Chevrolet","model":"Suburban 3500HD","body_styles":["SUV"],"price":98124,"colors":["blue","white","black"],"transmision":"manual"},
     {"year":2019,"make":"Chevrolet","model":"Tahoe","body_styles":["SUV"],"price":148281,"colors":["blue"],"transmision":"manual"},
@@ -42,8 +42,8 @@ var autos = [
     {"year":2019,"make":"Ford","model":"F250 Super Duty Regular Cab","body_styles":["Pickup"],"price":148597,"colors":["black","red","white","blue"],"transmision":"manual"},
     {"year":2019,"make":"Ford","model":"F250 Super Duty Super Cab","body_styles":["Pickup"],"price":85876,"colors":["white","red","blue","black"],"transmision":"manual"},
     {"year":2019,"make":"Ford","model":"F350 Super Duty Crew Cab","body_styles":["Pickup"],"price":115144,"colors":["black"],"transmision":"auto"},
-    {"year":2019,"make":"Ford","model":"F350 Super Duty Regular Cab","body_styles":["Pickup"],"price":115718,"colors":["red","black"],"transmision":"auto"}
-    ,{"year":2019,"make":"Ford","model":"F350 Super Duty Super Cab","body_styles":["Pickup"],"price":142427,"colors":["black","white","blue"],"transmision":"manual"},
+    {"year":2019,"make":"Ford","model":"F350 Super Duty Regular Cab","body_styles":["Pickup"],"price":115718,"colors":["red","black"],"transmision":"auto"},
+    {"year":2019,"make":"Ford","model":"F350 Super Duty Super Cab","body_styles":["Pickup"],"price":142427,"colors":["black","white","blue"],"transmision":"manual"},
     {"year":2019,"make":"Ford","model":"F450 Super Duty Crew Cab","body_styles":["Pickup"],"price":72759,"colors":["black","white","red","blue"],"transmision":"manual"},
     {"year":2019,"make":"Ford","model":"F450 Super Duty Regular Cab","body_styles":["Pickup"],"price":93724,"colors":["black","red","blue"],"transmision":"auto"},
     {"year":2019,"make":"Ford","model":"Fiesta","body_styles":["Hatchback","Sedan"],"price":98910,"colors":["black","white","blue","red"],"transmision":"auto"},
@@ -68,11 +68,11 @@ var autos = [
     {"year":2019,"make":"Nissan","model":"Frontier Crew Cab","body_styles":["Pickup"],"price":113962,"colors":["red","black"],"transmision":"manual"},
     {"year":2019,"make":"Nissan","model":"Frontier King Cab","body_styles":["Pickup"],"price":146598,"colors":["black","white","blue","red"],"transmision":"manual"},
     {"year":2019,"make":"Nissan","model":"GT-R","body_styles":["Coupe"],"price":74791,"colors":["black","white","red"],"transmision":"auto"},
-    {"year":2019,"make":"Nissan","model":"Kicks","body_styles":["SUV"],"price":126911,"colors":["red","white"],"transmision":"manual"}
-    ,{"year":2019,"make":"Nissan","model":"LEAF","body_styles":["Hatchback"],"price":91402,"colors":["black","blue"],"transmision":"manual"},
+    {"year":2019,"make":"Nissan","model":"Kicks","body_styles":["SUV"],"price":126911,"colors":["red","white"],"transmision":"manual"},
+    {"year":2019,"make":"Nissan","model":"LEAF","body_styles":["Hatchback"],"price":91402,"colors":["black","blue"],"transmision":"manual"},
     {"year":2019,"make":"Nissan","model":"Maxima","body_styles":["Sedan"],"price":84654,"colors":["red","blue","white"],"transmision":"auto"},
-    {"year":2019,"make":"Nissan","model":"Murano","body_styles":["SUV"],"price":127811,"colors":["black","white"],"transmision":"manual"}
-    ,{"year":2019,"make":"Nissan","model":"NV1500 Cargo","body_styles":["Van/Minivan"],"price":77649,"colors":["black","red"],"transmision":"auto"},
+    {"year":2019,"make":"Nissan","model":"Murano","body_styles":["SUV"],"price":127811,"colors":["black","white"],"transmision":"manual"},
+    {"year":2019,"make":"Nissan","model":"NV1500 Cargo","body_styles":["Van/Minivan"],"price":77649,"colors":["black","red"],"transmision":"auto"},
     {"year":2019,"make":"Nissan","model":"NV200","body_styles":["Van/Minivan"],"price":95952,"colors":["black","white"],"transmision":"auto"},
     {"year":2019,"make":"Nissan","model":"NV200 Taxi","body_styles":["Van/Minivan"],"price":108226,"colors":["red","blue","white"],"transmision":"auto"},
     {"year":2019,"make":"Nissan","model":"NV2500 HD Cargo","body_styles":["Van/Minivan"],"price":109837,"colors":["black","white","blue","red"],"transmision":"manual"},
@@ -101,8 +101,8 @@ var autos = [
     {"year":2020,"make":"Chevrolet","model":"Silverado 1500 Crew Cab","body_styles":["Pickup"],"price":117276,"colors":["red","blue","white","black"],"transmision":"manual"},
     {"year":2020,"make":"Chevrolet","model":"Silverado 1500 Regular Cab","body_styles":["Pickup"],"price":83005,"colors":["red","blue"],"transmision":"manual"},
     {"year":2020,"make":"Chevrolet","model":"Silverado 2500 HD Crew Cab","body_styles":["Pickup"],"price":104638,"colors":["black","red"],"transmision":"auto"},
-    {"year":2020,"make":"Chevrolet","model":"Silverado 3500 HD Crew Cab","body_styles":["Pickup"],"price":117129,"colors":["red"],"transmision":"manual"}
-    ,{"year":2020,"make":"Chevrolet","model":"Spark","body_styles":["Hatchback"],"price":125381,"colors":["white","blue"],"transmision":"manual"},
+    {"year":2020,"make":"Chevrolet","model":"Silverado 3500 HD Crew Cab","body_styles":["Pickup"],"price":117129,"colors":["red"],"transmision":"manual"},
+    {"year":2020,"make":"Chevrolet","model":"Spark","body_styles":["Hatchback"],"price":125381,"colors":["white","blue"],"transmision":"manual"},
     {"year":2020,"make":"Chevrolet","model":"Suburban","body_styles":["SUV"],"price":143452,"colors":["white","red","black"],"transmision":"manual"},
     {"year":2020,"make":"Chevrolet","model":"Tahoe","body_styles":["SUV"],"price":81953,"colors":["black","blue"],"transmision":"auto"},
     {"year":2020,"make":"Chevrolet","model":"Traverse","body_styles":["SUV"],"price":117637,"colors":["black"],"transmision":"auto"},
@@ -114,8 +114,8 @@ var autos = [
     {"year":2020,"make":"Ford","model":"Expedition MAX","body_styles":["SUV"],"price":78632,"colors":["blue","white"],"transmision":"auto"},
     {"year":2020,"make":"Ford","model":"Explorer","body_styles":["SUV"],"price":138890,"colors":["white","red","black","blue"],"transmision":"auto"},
     {"year":2020,"make":"Ford","model":"F150 Regular Cab","body_styles":["Pickup"],"price":100112,"colors":["black"],"transmision":"auto"},
-    {"year":2020,"make":"Ford","model":"F150 Super Cab","body_styles":["Pickup"],"price":90163,"colors":["white","black","blue"],"transmision":"auto"}
-    ,{"year":2020,"make":"Ford","model":"F150 SuperCrew Cab","body_styles":["Pickup"],"price":104087,"colors":["red","blue","white","black"],"transmision":"auto"},
+    {"year":2020,"make":"Ford","model":"F150 Super Cab","body_styles":["Pickup"],"price":90163,"colors":["white","black","blue"],"transmision":"auto"},
+    {"year":2020,"make":"Ford","model":"F150 SuperCrew Cab","body_styles":["Pickup"],"price":104087,"colors":["red","blue","white","black"],"transmision":"auto"},
     {"year":2020,"make":"Ford","model":"F250 Super Duty Crew Cab","body_styles":["Pickup"],"price":105773,"colors":["red","black","blue"],"transmision":"manual"},
     {"year":2020,"make":"Ford","model":"F350 Super Duty Crew Cab","body_styles":["Pickup"],"price":144590,"colors":["blue","white"],"transmision":"manual"},
     {"year":2020,"make":"Ford","model":"F450 Super Duty Crew Cab","body_styles":["Pickup"],"price":76711,"colors":["black","red","white"],"transmision":"manual"},
@@ -130,8 +130,8 @@ var autos = [
     {"year":2020,"make":"Nissan","model":"370Z","body_styles":["Coupe"],"price":103164,"colors":["red","blue","white"],"transmision":"manual"},
     {"year":2020,"make":"Nissan","model":"Altima","body_styles":["Sedan"],"price":97136,"colors":["red","white","blue","black"],"transmision":"auto"},
     {"year":2020,"make":"Nissan","model":"Armada","body_styles":["SUV"],"price":115176,"colors":["white","blue","red"],"transmision":"manual"},
-    {"year":2020,"make":"Nissan","model":"GT-R","body_styles":["Coupe"],"price":126619,"colors":["white","red","black"],"transmision":"manual"}
-    ,{"year":2020,"make":"Nissan","model":"Kicks","body_styles":["SUV"],"price":73796,"colors":["blue","white"],"transmision":"auto"},
+    {"year":2020,"make":"Nissan","model":"GT-R","body_styles":["Coupe"],"price":126619,"colors":["white","red","black"],"transmision":"manual"},
+    {"year":2020,"make":"Nissan","model":"Kicks","body_styles":["SUV"],"price":73796,"colors":["blue","white"],"transmision":"auto"},
     {"year":2020,"make":"Nissan","model":"LEAF","body_styles":["Hatchback"],"price":74793,"colors":["blue"],"transmision":"manual"},
     {"year":2020,"make":"Nissan","model":"Maxima","body_styles":["Sedan"],"price":90763,"colors":["black"],"transmision":"auto"},
     {"year":2020,"make":"Nissan","model":"Murano","body_styles":["SUV"],"price":145769,"colors":["black","white"],"transmision":"manual"},
@@ -149,8 +149,3 @@ var autos = [
     {"year":2020,"make":"Nissan","model":"TITAN XD Crew Cab","body_styles":["Pickup"],"price":109880,"colors":["blue","white","red"],"transmision":"manual"},
     {"year":2020,"make":"Nissan","model":"Versa","body_styles":["Sedan"],"price":76798,"colors":["red"],"transmision":"manual"}
 ]
-
-// marca => autos[i].make
-// modelo => autos[i].model
-// colores => autos[i].colors
-// precio => autos[i].price
