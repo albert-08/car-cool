@@ -16,6 +16,7 @@
                 var mark = marca.value
                 var trans = transmicion.value.toLowerCase()
                 var pres = parseInt(presupuesto.value)
+                var colores = []
                 if (model === autos[i].year && mark === autos[i].make && trans === autos[i].transmision && pres >= (autos[i].price*.2)){
                     var card = document.createElement('div')
                     card.className = 'card shadow cursor-pointer col-sm-4'
@@ -37,16 +38,16 @@
                         imgs.src = `https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Nissan_2020_logo.svg/800px-Nissan_2020_logo.svg.png`
                     }
 
-                    var name = document.createElement('h1')
-                    name.innerText = autos[i].model
+                    var name = document.createElement('h5')
+                    name.innerHTML = 'Nombre: '+autos[i].model
                     name.className = 'card-name'
 
                     var label = document.createElement('div')
-                    label.innerText = autos[i].make
+                    label.innerHTML = 'Marca: '+autos[i].make
                     label.className = 'card-make'
 
                     var año = document.createElement('div')
-                    año.innerText = autos[i].year
+                    año.innerHTML = 'Modelo: '+autos[i].year
                     año.className = 'card-year'
 
                     console.log(autos[i].model)
@@ -54,14 +55,16 @@
                     console.log(autos[i].year)
 
                     for(var j = 0; j < autos[i].colors.length; j++){
-                        console.log(autos[i].colors[j])
+                        colores.push(autos[i].colors[j])
+                        console.log(colores)
+                        //console.log(autos[i].colors[j])
                         var color = document.createElement('div')
-                        color.innerText = autos[i].colors[j]
+                        color.innerHTML = 'Colores: '+colores
                         color.className = 'card-color'
                     }
 
                     var precio = document.createElement('div')
-                    precio.innerText = autos[i].price
+                    precio.innerHTML = 'Precio: $'+autos[i].price
                     precio.className = 'card-price'
 
                     console.log(autos[i].price)
@@ -77,11 +80,12 @@
                 }
             }
         } else {
-            console.log("Algún campo está vacío!")
+            $('#modal-form-error').modal('show')
         }
     }
 
     buscar.addEventListener('click', function(){
+        coches.innerHTML = ''
         llenarFormulario()
     })
 
