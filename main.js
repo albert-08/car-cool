@@ -2,87 +2,182 @@
     "use strict"
     
     var coches = document.querySelector('.row')
-
     var modelo = document.getElementById('inputModelo')
     var marca = document.getElementById('inputMarca')
     var transmicion = document.getElementById('inputTransmision')
     var presupuesto = document.getElementById('inputPresupuesto')
     var buscar = document.getElementById('btnBuscar')
+    var buscarTodos = document.getElementById('btnTodos')
 
     function llenarFormulario(){    
-        if (modelo.value !== "" && marca.value !== "" &&  transmicion.value !== "" && presupuesto.value !== "0") {
+        if (modelo.value !== "" && marca.value !== "" &&  transmicion.value !== "" && presupuesto.value !== "") {
             for (var i = 0; i < autos.length; i++){
                 var model = parseInt(modelo.value)
-                var mark = marca.value
+                var mark = marca.value.toLowerCase()
                 var trans = transmicion.value.toLowerCase()
                 var pres = parseInt(presupuesto.value)
-                if (model === autos[i].year && mark === autos[i].make && trans === autos[i].transmision && pres >= (autos[i].price*.2)){
+                var colores = []
+                if (model === autos[i].year && mark === autos[i].make.toLowerCase() && trans === autos[i].transmision && pres >= (autos[i].price*.2)){
                     var card = document.createElement('div')
-                    card.className = 'card shadow cursor-pointer col-sm-4'
-                    
-                    var cardBody = document.createElement('div')
-                    cardBody.className = 'card-body'
+                    card.style = 'width:12rem;'
+                    card.id = 'carCard'
 
-                    if (autos[i].make === 'Chevrolet') {
+                    if (autos[i].make.toLowerCase() === 'chevrolet') {
+                        card.className = 'card text-white bg-secondary m-1 p-1'
                         var imgs = document.createElement('img')
                         imgs.className = 'card-img-top'
-                        imgs.src = `https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Chevrolet-logo.png/1024px-Chevrolet-logo.png`
-                    } else if (autos[i].make === 'Ford') {
+                        imgs.src = "./Assets/chevrolet-cartoon.svg"
+                        imgs.height = '150'
+                    } else if (autos[i].make.toLowerCase() === 'ford') {
+                        card.className = 'card text-white bg-primary m-1 p-1'
                         var imgs = document.createElement('img')
                         imgs.className = 'card-img-top'
-                        imgs.src = `https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/1280px-Ford_logo_flat.svg.png`
-                    } else if (autos[i].make === 'Nissan') {
+                        imgs.src = "./Assets/ford-cartoon.svg"
+                        imgs.height = '150'
+                    } else if (autos[i].make.toLowerCase() === 'nissan') {
+                        imgs.className = 'card text-white bg-danger m-1 p-1'
                         var imgs = document.createElement('img')
                         imgs.className = 'card-img-top'
-                        imgs.src = `https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Nissan_2020_logo.svg/800px-Nissan_2020_logo.svg.png`
+                        imgs.src = "./Assets/nissan-cartoon.svg"
+                        imgs.height = '150'
                     }
 
-                    var name = document.createElement('h1')
-                    name.innerText = autos[i].model
+                    var name = document.createElement('h5')
+                    name.innerHTML = autos[i].model
                     name.className = 'card-name'
+                    name.style="text-align:center;font-size:16px;font-weight:bold;"
 
                     var label = document.createElement('div')
-                    label.innerText = autos[i].make
+                    label.innerHTML = 'Marca: '+autos[i].make
                     label.className = 'card-make'
+                    label.style="font-size:14px;"
 
                     var año = document.createElement('div')
-                    año.innerText = autos[i].year
+                    año.innerHTML = 'Modelo: '+autos[i].year
                     año.className = 'card-year'
+                    año.style="font-size:14px;"
 
                     console.log(autos[i].model)
                     console.log(autos[i].make)
                     console.log(autos[i].year)
 
                     for(var j = 0; j < autos[i].colors.length; j++){
-                        console.log(autos[i].colors[j])
+                        colores.push(' '+autos[i].colors[j])
+                        console.log(colores)
+                        //console.log(autos[i].colors[j])
                         var color = document.createElement('div')
-                        color.innerText = autos[i].colors[j]
+                        color.innerHTML = 'Colores:'+colores
                         color.className = 'card-color'
+                        color.style="font-size:14px;"
                     }
 
                     var precio = document.createElement('div')
-                    precio.innerText = autos[i].price
+                    precio.innerHTML = 'Precio: $'+autos[i].price
                     precio.className = 'card-price'
+                    precio.style="font-size:14px;"
 
                     console.log(autos[i].price)
 
-                    cardBody.appendChild(imgs)
-                    cardBody.appendChild(name)
-                    cardBody.appendChild(label)
-                    cardBody.appendChild(año)
-                    cardBody.appendChild(color)
-                    cardBody.appendChild(precio)
-                    card.appendChild(cardBody)
+                    card.appendChild(imgs)
+                    card.appendChild(name)
+                    card.appendChild(label)
+                    card.appendChild(año)
+                    card.appendChild(color)
+                    card.appendChild(precio)
                     coches.appendChild(card)
                 }
             }
         } else {
-            console.log("Algún campo está vacío!")
+            $('#modal-form-error').modal('show')
+        }
+    }
+
+    function desplegarTodos(){
+        for (var i = 0; i < autos.length; i++){
+            var model = parseInt(modelo.value)
+            var mark = marca.value.toLowerCase()
+            var trans = transmicion.value.toLowerCase()
+            var pres = parseInt(presupuesto.value)
+            var colores = []
+
+                var card = document.createElement('div')
+                card.style = 'width:12rem;'
+                card.id = 'carCard'
+
+                if (autos[i].make.toLowerCase() === 'chevrolet') {
+                    card.className = 'card text-white bg-secondary m-1 p-1'
+                    var imgs = document.createElement('img')
+                    imgs.className = 'card-img-top'
+                    imgs.src = "./Assets/chevrolet-cartoon.svg"
+                    imgs.height = '150'
+                } else if (autos[i].make.toLowerCase() === 'ford') {
+                    card.className = 'card text-white bg-primary m-1 p-1'
+                    var imgs = document.createElement('img')
+                    imgs.className = 'card-img-top'
+                    imgs.src = "./Assets/ford-cartoon.svg"
+                    imgs.height = '150'
+                } else if (autos[i].make.toLowerCase() === 'nissan') {
+                    imgs.className = 'card text-white bg-danger m-1 p-1'
+                    var imgs = document.createElement('img')
+                    imgs.className = 'card-img-top'
+                    imgs.src = "./Assets/nissan-cartoon.svg"
+                    imgs.height = '150'
+                }
+
+                var name = document.createElement('h5')
+                name.innerHTML = autos[i].model
+                name.className = 'card-name'
+                name.style="text-align:center;font-size:16px;font-weight:bold;"
+
+                var label = document.createElement('div')
+                label.innerHTML = 'Marca: '+autos[i].make
+                label.className = 'card-make'
+                label.style="font-size:14px;"
+
+                var año = document.createElement('div')
+                año.innerHTML = 'Modelo: '+autos[i].year
+                año.className = 'card-year'
+                año.style="font-size:14px;"
+
+                console.log(autos[i].model)
+                console.log(autos[i].make)
+                console.log(autos[i].year)
+
+                for(var j = 0; j < autos[i].colors.length; j++){
+                    colores.push(' '+autos[i].colors[j])
+                    console.log(colores)
+                    //console.log(autos[i].colors[j])
+                    var color = document.createElement('div')
+                    color.innerHTML = 'Colores:'+colores
+                    color.className = 'card-color'
+                    color.style="font-size:14px;"
+                }
+
+                var precio = document.createElement('div')
+                precio.innerHTML = 'Precio: $'+autos[i].price
+                precio.className = 'card-price'
+                precio.style="font-size:14px;"
+
+                console.log(autos[i].price)
+
+                card.appendChild(imgs)
+                card.appendChild(name)
+                card.appendChild(label)
+                card.appendChild(año)
+                card.appendChild(color)
+                card.appendChild(precio)
+                coches.appendChild(card)
         }
     }
 
     buscar.addEventListener('click', function(){
+        coches.innerHTML = ''
         llenarFormulario()
+    })
+
+    buscarTodos.addEventListener('click', function(){
+        coches.innerHTML = ''
+        desplegarTodos()
     })
 
 })() //IIFE Immediatal Invoked Function Expressions 
