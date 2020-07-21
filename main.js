@@ -35,7 +35,7 @@
                         imgs.src = "./Assets/ford-cartoon.svg"
                         imgs.height = '150'
                     } else if (autos[i].make.toLowerCase() === 'nissan') {
-                        imgs.className = 'card text-white bg-danger m-1 p-1'
+                        card.className = 'card text-white bg-danger m-1 p-1'
                         var imgs = document.createElement('img')
                         imgs.className = 'card-img-top'
                         imgs.src = "./Assets/nissan-cartoon.svg"
@@ -117,7 +117,7 @@
                     imgs.src = "./Assets/ford-cartoon.svg"
                     imgs.height = '150'
                 } else if (autos[i].make.toLowerCase() === 'nissan') {
-                    imgs.className = 'card text-white bg-danger m-1 p-1'
+                    card.className = 'card text-white bg-danger m-1 p-1'
                     var imgs = document.createElement('img')
                     imgs.className = 'card-img-top'
                     imgs.src = "./Assets/nissan-cartoon.svg"
